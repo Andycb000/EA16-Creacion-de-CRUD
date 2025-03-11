@@ -1,20 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      EA16 - Creacion de CRUD - Andrea Cota Barocio
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!--Heading-->
+  <h2 class="text-4xl font-bold dark:text-white">Lista de tareas</h2>
+
+  <!--Formulario-->
+  <div id="content" class="text-center">
+    <form>
+
+      <!--Input de tarea-->
+      <ion-label class="text-gray-400 text-lg font-semibold">Ingresa una tarea</ion-label><br>
+      <input class="border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400" type="text"
+        name="tarea" id="tarea"><br> <br>
+
+      <!-- Botón de Iniciar Sesión -->
+      <button
+        class="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        expand="full" type="submit">Agregar tarea</button>
+    </form>
+
+    <button
+      class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+      expand="full">Mostrar lista de tareas</button>
+
   </div>
 </ion-content>
