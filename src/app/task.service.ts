@@ -1,23 +1,16 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { Firestore, collection, addDoc, updateDoc, deleteDoc, doc, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
-export interface Task {
-  id: string;
-  title: string;
-  completed: boolean;
-}
-
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-
 export class TaskService {
   private tasksCollection = collection(this.firestore, 'tasks');
 
   constructor(private firestore: Firestore) { }
 
-  gatTasks(): Observable<Task[]> {
+  getTasks(): Observable<Task[]> {
     return collectionData(this.tasksCollection, { idField: 'id' }) as Observable<Task[]>;
   }
 
@@ -34,4 +27,9 @@ export class TaskService {
     const taskDoc = doc(this.firestore, `tasks/${id}`);
     return deleteDoc(taskDoc);
   }
+}
+
+export interface Task {
+  id?: string;
+  name: string;
 }
